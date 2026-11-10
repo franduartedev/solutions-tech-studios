@@ -1,7 +1,7 @@
 import type { StudioConfig } from './types';
 import { demoContact, demoForm } from './shared';
 
-/** Estudio jurídico · identidad: tinta, papel cálido y bordó. Hero a sangre sobre biblioteca. */
+/** Estudio jurídico · Modern Boutique: carbón, marfil, gris piedra y bordó suave. Arquitectura contemporánea y travertino. */
 export const juridico: StudioConfig = {
   id: 'juridico',
   label: 'Jurídico',
@@ -16,26 +16,27 @@ export const juridico: StudioConfig = {
       'Asesoramiento jurídico a personas, familias y empresas con atención directa, lenguaje claro y estrategia a medida. Sitio demostrativo.',
   },
   theme: {
-    paper: '#f2eee7',
-    paper2: '#e9e3d9',
-    ink: '#1a1714',
-    muted: '#51493f',
-    line: '#d5cdbf',
-    accent: '#6e1f2b',
-    onAccent: '#f7f1e8',
-    night: '#16120f',
-    onNight: '#efe8dc',
+    paper: '#f4f1eb',
+    paper2: '#e5e1da',
+    ink: '#1c1b1a',
+    muted: '#55514b',
+    line: '#cfcac0',
+    accent: '#7a3441',
+    onAccent: '#f8f4ee',
+    night: '#1d1c1b',
+    onNight: '#eeeae3',
   },
   nav: { studio: 'El estudio', areas: 'Áreas de práctica', philosophy: 'Forma de trabajo', contact: 'Contacto' },
   hero: {
     layout: 'full',
-    eyebrow: 'Estudio jurídico',
+    eyebrow: 'Estudio jurídico · Argentina',
     title: 'Cada caso\nmerece *criterio*,\nno fórmulas.',
     lede: 'Asesoramos a personas, familias y empresas con atención directa, lenguaje claro y una estrategia pensada para cada situación.',
     primaryCta: 'Coordinar una consulta',
     secondaryCta: 'Ver áreas de práctica',
     photo: 1,
-    overlay: 0.62,
+    overlay: 0.5,
+    editorial: { photo: 2, detail: 7 },
   },
   studio: {
     eyebrow: 'El estudio',
@@ -49,7 +50,7 @@ export const juridico: StudioConfig = {
       { title: 'Lenguaje claro', text: 'Entendés cada paso y cada documento, sin tecnicismos innecesarios.' },
       { title: 'Estrategia a medida', text: 'Cada situación se analiza por sí misma; no se resuelve con modelos genéricos.' },
     ],
-    photo: 2,
+    photo: 4,
     caption: 'Fotografía ilustrativa',
   },
   areas: {
@@ -75,13 +76,13 @@ export const juridico: StudioConfig = {
         title: 'Derecho laboral',
         summary: 'Asesoramiento a trabajadores y empleadores en la relación de trabajo, desde su inicio hasta su extinción.',
         topics: ['Despidos e indemnizaciones', 'Registración laboral', 'Acuerdos y conciliaciones', 'Prevención'],
-        photo: 4,
+        photo: 6,
       },
       {
         title: 'Empresas y sociedades',
         summary: 'Estructura legal y acompañamiento permanente para la actividad comercial.',
         topics: ['Constitución y reformas', 'Acuerdos entre socios', 'Contratación comercial', 'Asesoramiento periódico'],
-        photo: 6,
+        photo: 7,
       },
     ],
   },
@@ -94,7 +95,7 @@ export const juridico: StudioConfig = {
       { title: 'Atención personalizada', text: 'Un interlocutor claro, tiempos de respuesta acordados y seguimiento activo de tu asunto.' },
       { title: 'Claridad', text: 'Alcances, honorarios y próximos pasos explicados por escrito desde el comienzo.' },
     ],
-    photo: 3,
+    photo: 8,
   },
   contact: {
     eyebrow: 'Contacto',
@@ -107,11 +108,13 @@ export const juridico: StudioConfig = {
     },
   },
   photos: {
-    1: { alt: 'Biblioteca de madera oscura con estantes altos y escaleras de mano', focus: '50% 55%', author: 'Alex Block', unsplashId: 'PdDBTrkGYLo' },
-    2: { alt: 'Galería con arcos y ventanas iluminadas por luz cálida', focus: '50% 50%', author: 'Phillip Flores', unsplashId: 'bz5dJ48tyRE' },
-    3: { alt: 'Columnas clásicas vistas desde abajo contra el cielo', focus: '50% 40%', author: 'Jesse Collins', unsplashId: 'ICXMkhRdquA' },
-    4: { alt: 'Columnata de mármol blanco bañada de luz', focus: '50% 40%', author: 'Courtney Cantu', unsplashId: '-o5aiE8BR3c' },
-    5: { alt: 'Cielorraso ornamentado de un edificio clásico', focus: '50% 50%', author: 'Karla Caloca', unsplashId: '2uGxst615P4' },
-    6: { alt: 'Fachada de columnas de piedra en blanco y negro', focus: '50% 40%', author: 'Sebastian Schuster', unsplashId: 'lCkHnqTnjXw' },
+    1: { alt: 'Atrio interior de travertino claro con pasarelas y barandas de vidrio', focus: '50% 22%', author: 'Paul Menz', unsplashId: 'yhB5EM_OkGw' },
+    2: { alt: 'Muro y volúmenes de travertino vistos en diagonal, con luz natural', focus: '50% 40%', author: 'Paul Menz', unsplashId: '0XU9JHgxUnQ' },
+    3: { alt: 'Muro de piedra clara con baranda de madera y luz lateral', focus: '50% 40%', author: 'Sofia Lasheva', unsplashId: 'QgHEQ9ULqK4' },
+    4: { alt: 'Escalera de piedra clara en un vano de líneas puras', focus: '50% 55%', author: 'Alesia Kazantceva', unsplashId: '0B7ijYKaKcE' },
+    5: { alt: 'Sala de reuniones revestida en madera con mesa ovalada', focus: '40% 50%', author: 'john renzzel', unsplashId: 'rr12y4qEbps' },
+    6: { alt: 'Fachada de hormigón visto con celosías de madera', focus: '50% 40%', author: 'Paul Menz', unsplashId: 'DqV7R-iU4-I' },
+    7: { alt: 'Luz natural proyectando líneas sobre un muro liso', focus: '50% 50%', author: 'Annalisa Overgaard', unsplashId: 'haXoAIkEbQo' },
+    8: { alt: 'Pasillo de oficina con mamparas de vidrio y marcos oscuros', focus: '50% 50%', author: 'Nastuh Abootalebi', unsplashId: 'rSpMla5RItA' },
   },
 };

@@ -3,3 +3,4 @@ dist
 *.local
 .vercel
 screenshots/_tmp
+_tmp

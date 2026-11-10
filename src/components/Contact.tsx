@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react';
-import { Clock, Mail, MapPin, Phone, Check } from 'lucide-react';
+import { ArrowRight, Clock, Mail, MapPin, Phone, Check } from 'lucide-react';
 import type { StudioConfig } from '../config';
 import { Reveal } from './Reveal';
 import { Mk } from '../lib/rich';
@@ -94,6 +94,7 @@ export function Contact({ studio, subject, onSubject }: Props) {
               </div>
               <button type="submit" className="btn btn-ink">
                 <span>{c.form.submit}</span>
+                <span className="btn-ico" aria-hidden="true"><ArrowRight size={16} strokeWidth={1.75} /></span>
               </button>
               <p className="form-notice">{c.form.notice}</p>
             </form>

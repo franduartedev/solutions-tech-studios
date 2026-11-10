@@ -82,7 +82,7 @@ export function Header({ studio, offset }: Props) {
 
           <a href="#contacto" className="header-cta">
             <span>{studio.nav.contact}</span>
-            <ArrowUpRight size={16} strokeWidth={1.5} aria-hidden="true" />
+            <span className="btn-ico" aria-hidden="true"><ArrowUpRight size={15} strokeWidth={1.75} /></span>
           </a>
 
           <button

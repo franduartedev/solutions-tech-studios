@@ -5,16 +5,17 @@ import { Photo } from './Photo';
 import { Lines, plain } from '../lib/rich';
 
 /**
- * Hero: tres composiciones según el rubro (config.hero.layout).
- * - full:  foto a sangre con tipografía protagonista sobre ella.
- * - split: columna de texto + foto vertical con marco desplazado.
- * - arch:  foto recortada en arco (eco de las arcadas) junto al título.
- * Sin tarjetas flotantes, métricas ni mockups: la foto y la tipografía hacen el trabajo.
+ * Hero: cuatro composiciones según el rubro (config.hero.layout) o ?hero=…
+ * - full:      foto a sangre; título, bajada y botones forman un único bloque.
+ * - editorial: columna tipográfica + foto vertical con foto de detalle superpuesta (asimétrica).
+ * - split:     columna de texto + foto vertical con marco desplazado.
+ * - arch:      foto recortada en arco junto al título.
+ * Sin tarjetas flotantes, métricas ni mockups: la fotografía y la tipografía hacen el trabajo.
  */
 export function Hero({ studio }: { studio: StudioConfig }) {
   const { hero } = studio;
 
-  const copy = (
+  const title = (
     <>
       <p className="eyebrow hero-eyebrow">{hero.eyebrow}</p>
       <h1 className="display hero-title" aria-label={plain(hero.title)}>
@@ -27,7 +28,7 @@ export function Hero({ studio }: { studio: StudioConfig }) {
     <div className="hero-actions">
       <a href="#contacto" className="btn btn-primary">
         <span>{hero.primaryCta}</span>
-        <ArrowRight size={18} strokeWidth={1.5} aria-hidden="true" />
+        <span className="btn-ico" aria-hidden="true"><ArrowRight size={16} strokeWidth={1.75} /></span>
       </a>
       <a href="#areas" className="btn-link">
         <span>{hero.secondaryCta}</span>
@@ -36,19 +37,48 @@ export function Hero({ studio }: { studio: StudioConfig }) {
     </div>
   );
 
+  const foot = (
+    <div className="hero-foot">
+      <p className="hero-lede">{hero.lede}</p>
+      {actions}
+    </div>
+  );
+
   if (hero.layout === 'full') {
     return (
-      <section id="inicio" className="hero hero-full" style={{ '--overlay': hero.overlay ?? 0.55 } as CSSProperties}>
+      <section id="inicio" className="hero hero-full" style={{ '--overlay': hero.overlay ?? 0.5 } as CSSProperties}>
         <div className="hero-media">
           <Photo studio={studio} n={hero.photo} sizes="100vw" eager className="hero-img" />
           <div className="hero-shade" aria-hidden="true" />
         </div>
+        <div className="hero-rules" aria-hidden="true"><i /><i /></div>
         <div className="container hero-grid">
-          <div className="hero-copy">{copy}</div>
-          <div className="hero-foot">
-            <p className="hero-lede">{hero.lede}</p>
-            {actions}
+          <div className="hero-copy">{title}</div>
+          {foot}
+          <p className="hero-credit">{studio.studio.caption}</p>
+        </div>
+      </section>
+    );
+  }
+
+  if (hero.layout === 'editorial') {
+    const ed = hero.editorial ?? { photo: hero.photo, detail: (hero.photo % 6) + 1 };
+    return (
+      <section id="inicio" className="hero hero-editorial">
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <div className="hero-headline">{title}</div>
+            {foot}
           </div>
+          <figure className="hero-figure">
+            <div className="ed-main">
+              <Photo studio={studio} n={ed.photo} sizes="(min-width:1024px) 42vw, 92vw" eager className="hero-img" />
+            </div>
+            <div className="ed-detail">
+              <Photo studio={studio} n={ed.detail} sizes="(min-width:1024px) 16vw, 36vw" decorative />
+            </div>
+            <figcaption>{studio.studio.caption}</figcaption>
+          </figure>
         </div>
       </section>
     );
@@ -58,7 +88,7 @@ export function Hero({ studio }: { studio: StudioConfig }) {
     <section id="inicio" className={`hero hero-${hero.layout}`}>
       <div className="container hero-grid">
         <div className="hero-copy">
-          {copy}
+          {title}
           <p className="hero-lede">{hero.lede}</p>
           {actions}
         </div>

@@ -10,12 +10,14 @@ Página de cada foto: `https://unsplash.com/photos/<ID>`
 
 | Rubro | N.º | Autoría | ID Unsplash | Uso |
 |---|---|---|---|---|
-| Jurídico | 1 | Alex Block | PdDBTrkGYLo | Hero |
-| Jurídico | 2 | Phillip Flores | bz5dJ48tyRE | El estudio |
-| Jurídico | 3 | Jesse Collins | ICXMkhRdquA | Áreas / Forma de trabajo |
-| Jurídico | 4 | Courtney Cantu | -o5aiE8BR3c | Áreas |
-| Jurídico | 5 | Karla Caloca | 2uGxst615P4 | Áreas |
-| Jurídico | 6 | Sebastian Schuster | lCkHnqTnjXw | Áreas |
+| Jurídico | 1 | Paul Menz | yhB5EM_OkGw | Hero A (a sangre) |
+| Jurídico | 2 | Paul Menz | 0XU9JHgxUnQ | Hero B (editorial) |
+| Jurídico | 3 | Sofia Lasheva | QgHEQ9ULqK4 | Áreas |
+| Jurídico | 4 | Alesia Kazantceva | 0B7ijYKaKcE | El estudio |
+| Jurídico | 5 | john renzzel | rr12y4qEbps | Áreas |
+| Jurídico | 6 | Paul Menz | DqV7R-iU4-I | Áreas |
+| Jurídico | 7 | Annalisa Overgaard | haXoAIkEbQo | Hero B (detalle) / Áreas |
+| Jurídico | 8 | Nastuh Abootalebi | rSpMla5RItA | Forma de trabajo |
 | Contable | 1 | Julien Moreau | 688Fna1pwOQ | Áreas / Forma de trabajo |
 | Contable | 2 | Mike Von | 2hzL3NMOozs | Hero |
 | Contable | 3 | Akin Cakiner | LtS0APv6-5c | El estudio |

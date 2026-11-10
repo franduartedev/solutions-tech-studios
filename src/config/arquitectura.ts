@@ -21,7 +21,7 @@ export const arquitectura: StudioConfig = {
     ink: '#1b1b1a',
     muted: '#585751',
     line: '#cbc8bf',
-    accent: '#b8431a',
+    accent: '#a53a14',
     onAccent: '#fff6ee',
     night: '#161615',
     onNight: '#ecebe6',

@@ -26,6 +26,7 @@ const HEX = /^#?([0-9a-f]{6})$/i;
  *   ?cliente=slug              → propuesta preparada para un cliente
  *   ?nombre=Estudio%20Ferreyra   → reemplaza el nombre del estudio
  *   ?color=0b5d3b                → reemplaza el color de acento
+ *   ?hero=full|editorial|split|arch → fuerza la composición del hero (para comparar)
  *   ?demo=0                      → oculta la barra de demostración
  */
 export function resolveStudio(search: string): { config: StudioConfig; showDemoBar: boolean } {
@@ -36,10 +37,13 @@ export function resolveStudio(search: string): { config: StudioConfig; showDemoB
     cliente && cliente in clients ? clients[cliente] : studios[isRubro(rubro) ? rubro : defaultRubro];
   const nombre = q.get('nombre')?.trim().slice(0, 40);
   const color = q.get('color')?.match(HEX);
+  const heroParam = q.get('hero');
+  const layout = (['full', 'split', 'arch', 'editorial'] as const).find((l) => l === heroParam);
   const config: StudioConfig = {
     ...base,
     name: nombre || base.name,
     theme: color ? { ...base.theme, accent: `#${color[1]}` } : base.theme,
+    hero: layout ? { ...base.hero, layout } : base.hero,
   };
   return { config, showDemoBar: q.get('demo') !== '0' };
 }

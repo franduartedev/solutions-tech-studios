@@ -11,7 +11,7 @@
 export type RubroId = 'juridico' | 'contable' | 'gestoria' | 'arquitectura';
 
 /** Composición del hero: 'full' (foto a sangre), 'split' (columna + foto vertical), 'arch' (foto en arco). */
-export type HeroLayout = 'full' | 'split' | 'arch';
+export type HeroLayout = 'full' | 'split' | 'arch' | 'editorial';
 
 export interface Theme {
   /** Fondo principal (papel). */
@@ -98,6 +98,8 @@ export interface StudioConfig {
     photo: number;
     /** Oscurecimiento de la foto en layout 'full' (0–1). */
     overlay?: number;
+    /** Fotos para el layout 'editorial': principal (vertical) y detalle (material/luz). */
+    editorial?: { photo: number; detail: number };
   };
   studio: {
     eyebrow: string;
