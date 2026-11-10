@@ -26,7 +26,7 @@ npm run preview    # sirve el build
 | `&color=0b5d3b` | reemplaza el color de acento (hex de 6 dígitos, sin `#`) |
 | `&demo=0` | oculta la barra de demostración (para capturas o para mostrar el sitio "limpio") |
 
-Ejemplo para una reunión: `https://<demo>.vercel.app/?rubro=contable&nombre=Estudio%20Ferreyra&color=14532d&demo=0`
+Ejemplo público: [rubro contable con nombre, color y barra de demo ocultos](https://franduartedev.github.io/solutions-tech-studios/?rubro=contable&nombre=Estudio%20Ferreyra&color=14532d&demo=0).
 
 ## Dirección artística: Modern Boutique (rama `direccion/modern-boutique`)
 
@@ -61,16 +61,14 @@ En títulos, `*texto*` genera cursiva de acento y `\n` un salto de línea.
 
 GitHub Pages se despliega solo con cada push a `master` (`.github/workflows/pages.yml`, base `/solutions-tech-studios/`). Para Vercel o un dominio propio compilar con `VITE_BASE=/ npm run build`.
 
-## Despliegue en Vercel
+## Publicación
 
-No se publicó nada desde este proyecto. Cuando haya autorización:
+La demo está publicada mediante GitHub Pages:
 
-1. Subir la carpeta a un repositorio (GitHub/GitLab).
-2. En [vercel.com/new](https://vercel.com/new) importar el repo. Vercel detecta Vite; `vercel.json` ya define
-   build (`npm run build`), salida (`dist`) y caché larga para `/img` y `/assets`.
-3. *Deploy*. Opcional: asociar un dominio propio de la demo (p. ej. `demo.solutionstech.com.ar`).
+- [Abrir Solutions Tech Studios](https://franduartedev.github.io/solutions-tech-studios/)
+- [Abrir ejemplo personalizado](https://franduartedev.github.io/solutions-tech-studios/?rubro=juridico&nombre=Estudio%20Ferreyra&color=0b5d3b&demo=0)
 
-Por CLI: `npx vercel` (preview) y `npx vercel --prod`. El sitio incluye `noindex` mientras sea demo.
+El despliegue de Pages se ejecuta al actualizar `master` mediante `.github/workflows/pages.yml`, con la base `/solutions-tech-studios/`. Para publicar bajo un dominio o en Vercel, usá `VITE_BASE=/ npm run build`; el archivo `vercel.json` contiene la configuración alternativa de build.
 
 ## Pruebas
 
