@@ -15,7 +15,7 @@ interface Props {
 /** Imagen responsive con tres anchos (800/1400/2200) y carga diferida salvo el hero. */
 export function Photo({ studio, n, sizes, eager, className, style, decorative }: Props) {
   const meta = studio.photos[n];
-  const base = `/img/${studio.photoSet ?? studio.id}/${n}`;
+  const base = `${import.meta.env.BASE_URL}img/${studio.photoSet ?? studio.id}/${n}`;
   return (
     <img
       className={className}

@@ -5,7 +5,7 @@ import { chromium } from 'playwright';
 import { spawn } from 'node:child_process';
 
 const PORT = 4174;
-const BASE = `http://localhost:${PORT}`;
+const BASE = `http://localhost:${PORT}${process.env.E2E_PATH ?? ""}`;
 const RUBROS = ['juridico', 'contable', 'gestoria', 'arquitectura'];
 const VPS = [[1440, 900], [768, 1024], [390, 844]];
 let fails = 0;

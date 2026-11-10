@@ -57,6 +57,10 @@ En títulos, `*texto*` genera cursiva de acento y `\n` un salto de línea.
 `name`, textos y `theme.accent`, y registrarlo en `index.ts`. Para fotos propias: dejar
 `public/img/<id>/1..6-{800,1400,2200}.jpg` (o cambiar `Photo.tsx`) y actualizar `photos`.
 
+## Publicación
+
+GitHub Pages se despliega solo con cada push a `master` (`.github/workflows/pages.yml`, base `/solutions-tech-studios/`). Para Vercel o un dominio propio compilar con `VITE_BASE=/ npm run build`.
+
 ## Despliegue en Vercel
 
 No se publicó nada desde este proyecto. Cuando haya autorización:
