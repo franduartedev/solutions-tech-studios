@@ -33,7 +33,7 @@ Ejemplo para una reunión: `https://<demo>.vercel.app/?rubro=contable&nombre=Est
 La versión anterior (biblioteca y columnas, paleta bordó intenso) está guardada como la etiqueta git `v1-clasica`
 (`git checkout v1-clasica`); la rama `master` sigue en ese punto. Esta rama explora: carbón, marfil, gris piedra y
 bordó suave; fotografía de arquitectura contemporánea (travertino, hormigón, luz natural); botones y navegación en píldora.
-Hay dos heros para comparar en el jurídico: `?rubro=juridico&hero=full` (A, foto a sangre) y `&hero=editorial` (B, asimétrico).
+Se eligió el hero A (foto a sangre) como diseño base y la rama se integró en `master`; el hero editorial queda disponible como opción reutilizable. Para compararlos: `?rubro=juridico&hero=full` (A, foto a sangre) y `&hero=editorial` (B, asimétrico).
 Capturas en `screenshots/comparar/`. `npm run test:contrast` audita contraste AA y tamaño mínimo de texto.
 
 ## Configuración de cada rubro
